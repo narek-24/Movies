@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(0, 0%, 9%);
+
+  --muted: hsla(0, 0%, 0%, 3%);
+  --muted-hover: hsla(0, 0%, 0%, 6%);
+  --muted-foreground: hsl(0, 0%, 29%);
+
+  --primary: hsl(0, 0%, 16%);
+  --primary-hover: hsl(0, 0%, 20%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-text: hsl(247, 49%, 27%);
+
+  --popover: hsl(0, 0%, 100%);
+  --popover-focus: hsl(0, 0%, 95%);
+  --popover-border: hsl(0, 0%, 93%);
+  --popover-foreground: hsl(0, 0%, 1%);
+
+  --input: hsl(0, 0%, 0%, 1%);
+  --input-border: hsl(0, 0%, 0%, 10%);
+  --input-foreground: hsl(0, 0%, 10%);
+  --input-placeholder: hsl(0, 0%, 55%);
+
+  --border: hsl(0, 0%, 94%);
+  --ring: hsla(0, 0%, 18%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+
+  --muted: hsla(0, 0%, 100%, 6%);
+  --muted-hover: hsla(0, 0%, 100%, 8%);
+  --muted-foreground: hsl(0, 0%, 70%);
+
+  --primary: hsl(0, 0%, 90%);
+  --primary-hover: hsl(0, 0%, 82%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --primary-text: hsl(247, 100%, 85%);
+
+  --popover: hsl(0, 0%, 10%);
+  --popover-focus: hsl(0, 0%, 14%);
+  --popover-border: hsl(0, 0%, 16%);
+  --popover-foreground: hsl(0, 0%, 97%);
+
+  --input: hsl(0, 0%, 100%, 3%);
+  --input-border: hsl(0, 0%, 100%, 8%);
+  --input-foreground: hsl(0, 0%, 98%);
+  --input-placeholder: hsl(0, 0%, 50%);
+
+  --border: hsla(0, 0%, 12%);
+  --ring: hsl(0, 0%, 88%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-hover: var(--muted-hover);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-text: var(--primary-text);
+
+  --color-popover: var(--popover);
+  --color-popover-focus: var(--popover-focus);
+  --color-popover-border: var(--popover-border);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-input: var(--input);
+  --color-input-border: var(--input-border);
+  --color-input-foreground: var(--input-foreground);
+  --color-input-placeholder: var(--input-placeholder);
+
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --radius-xs: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: calc(var(--radius) + 2px);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply h-full;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-background text-foreground m-0! h-full overflow-x-clip overflow-y-scroll antialiased;
+  }
+
+  h1 {
+    @apply text-2xl font-extrabold tracking-tighter md:text-3xl;
+  }
+
+  h2 {
+    @apply mb-3 text-xl font-semibold tracking-tight;
+  }
+
+  a {
+    @apply focus-visible:ring-ring rounded px-1 outline-none focus-visible:ring-2;
+  }
+}
+
+@layer utilities {
+  .container {
+    max-inline-size: 1305px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .rounded {
+    border-radius: var(--radius);
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply animate-pulse bg-black/7 dark:bg-white/10;
+  }
+
+  .discover-grid {
+    @apply grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 md:gap-x-6 md:gap-y-8 xl:grid-cols-5;
+  }
+}
