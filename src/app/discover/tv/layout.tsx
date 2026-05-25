@@ -33,7 +33,7 @@ export default async function DisoverTvLayout({
 
   return (
     <>
-      <div className="relative py-20 md:py-32">
+      <div className="relative py-16 md:py-21">
         <Image
           alt="Discover TV shows hero background - Browse series by genre, rating, and year"
           src="https://image.tmdb.org/t/p/original/piXgY187CP4O5180A2fZX9BPfZe.jpg"

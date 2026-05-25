@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   }
 
   const res = await tmdb.GET("/3/search/multi", {
-    params: { query: { query: q, include_adult: true } },
+    params: { query: { query: q } },
   });
 
   const results = res.data?.results;

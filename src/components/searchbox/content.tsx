@@ -112,7 +112,7 @@ export default function SearchContent({ setOpen }: Props) {
                         size="w92"
                         width={60}
                         height={90}
-                        className="shrink-0 rounded bg-black/3 dark:bg-white/5"
+                        className="h-[90px] w-[60px] shrink-0 rounded bg-black/3 dark:bg-white/5"
                         fallback={<div></div>}
                       />
                       <div className="flex flex-col gap-1">

@@ -110,7 +110,7 @@ export default async function PersonDetailsPage({
   return (
     <>
       <section className="relative py-16 md:pt-18 lg:pb-24">
-        <div className="to-background absolute inset-0 -z-20 bg-linear-to-r from-slate-600 to-gray-500 opacity-6 dark:opacity-10"></div>
+        <div className="absolute inset-0 -z-20 bg-linear-to-r from-slate-600 to-gray-500 opacity-6 dark:opacity-10"></div>
         <div className="to-background absolute inset-0 -z-10 bg-linear-to-b from-transparent via-transparent"></div>
 
         <div className="container">

@@ -8,7 +8,7 @@ import DetailsHeroSection from "../../_components/hero-section";
 import TMDBImage from "@/components/tmdb-image";
 import Credits from "../../_components/credits";
 
-export const revalidate = 604800
+export const revalidate = 604800;
 
 const getMovieData = cache(async (movieId: number) => {
   const { data } = await tmdb.GET("/3/movie/{movie_id}", {
@@ -17,8 +17,8 @@ const getMovieData = cache(async (movieId: number) => {
       query: { append_to_response: "credits,videos" },
     },
     next: {
-      revalidate: 604800
-    }
+      revalidate: 604800,
+    },
   });
 
   return data as typeof data & {

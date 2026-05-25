@@ -33,7 +33,7 @@ export default async function DisoverMovieLayout({
 
   return (
     <>
-      <div className="relative py-20 md:py-32">
+      <div className="relative py-16 md:py-21">
         <Image
           alt="Discover movies hero background - Browse films by genre, rating, and year"
           src="https://image.tmdb.org/t/p/original/dqK9Hag1054tghRQSqLSfrkvQnA.jpg"
