@@ -2,24 +2,21 @@
 
 A modern movie and TV discovery app for exploring movies, shows, and the people behind them. Browse with advanced filters and fast search, then dive into detailed pages featuring cast, crew, trailers, ratings, and more. Built with Next.js, TypeScript, Tailwind CSS, and the TMDB API.
 
-<video controls width="800" poster="public/Screenshot.png">
-	<source src="public/Showcase.mp4" type="video/mp4">
-	Your browser does not support the video element. You can download the video here: [Showcase.mp4](public/Showcase.mp4).
-</video>
+![Screenshot](./public/Screenshot.png)
 
 ## ✨ Core Features
 
-**Explorer (Movies & TV)**  
- Browse movies or TV shows with various filter options, plus smooth **infinite scroll**.
+- **Explorer (Movies & TV)**  
+  Browse movies or TV shows with various filter options and infinite scroll.
 
-**Movie & TV Details**  
- Rich detail pages with cast, crew, ratings, genres, videos and multiple carousels.
+- **Movie & TV Details**  
+  Access detailed information for each title, including ratings, genres, release information, cast and crew, trailers, and curated content carousels for related media.
 
-**Person Details**  
- View biographies and profile info, plus **filterable credits** grouped by acting/production roles.
+- **Person Details**  
+  View biographies and profile info, plus filterable credits grouped by acting/production roles.
 
-**Debounced Search Dialog**  
- A global search dialog with fast autocomplete, keyboard navigation, and a lightweight debounced combobox.
+- **Debounced Search Dialog**  
+  Search across movies, TV shows, and people from a centralized search dialog with a combobox with debounced queries.
 
 ## 📦 Installation & Setup
 
